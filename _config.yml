@@ -1,7 +1,8 @@
 theme: jekyll-theme-cayman
-title: Geospatial Insights from Acorn
+title: "Geospatial Insights: Tyler Acorn"
 description: Insights into local spatial datasets
 
 twitter_username: tyler_acorn
 github_username:  tyleracorn
 repository: tyleracorn/tyleracorn.github.io
+google_analytics: UA-127304235-2
