@@ -1,4 +1,4 @@
-theme: jekyll-theme-cayman
+remote_theme: "mmistakes/minimal-mistakes@4.19.0"
 title: "Geospatial Insights: Tyler Acorn"
 description: Insights into local spatial datasets
 
