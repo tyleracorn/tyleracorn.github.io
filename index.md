@@ -1,5 +1,6 @@
 ---
 layout: home
+title: "Geostatistician (Spatial Analysis) - Data Scientist"
 author_profile: true
 gallery:
   - url: portfolio/covid_alberta/
@@ -16,8 +17,6 @@ gallery:
     alt: "pygeostat"
 toc: True
 ---
-
-# Geostatistician (Spatial Analysis) - Data Scientist
 
 This website aims to share my journey into spatial analysis with open datasets. My goal is to find interesting questions in the world around us in the hopes that the visualization of open-data can encourage discussion in our local communities.
 
