@@ -172,6 +172,7 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  - examples/ # examples to help figure out how to do things
 keep_files:
   - .git
   - .svn
@@ -228,8 +229,7 @@ whitelist:
   - jekyll-feed
   - jekyll-include-cache
 
-exclude:
-  - examples/
+
 
 # Archives
 #  Type
@@ -247,6 +247,12 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
@@ -288,4 +294,12 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
 
