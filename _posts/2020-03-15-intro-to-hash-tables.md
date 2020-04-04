@@ -7,6 +7,7 @@ header:
 tags:
   - python
   - hashtable
+toc: true
 ---
 
 Today I want to show you a way to speed up your code. If you are like me and are a self taught programmer/coder/data scientist... you are probably pretty comfortable with loops. We all know that loops are "horribly slow" and that you "should never use" them... blah blah blah.... However, for many of us, they are our default approach for a quick and dirt "first draft." What I want to talk about in this post are hashtables.
@@ -94,7 +95,7 @@ As you can see, the loopy-de-loop version very very quickly scales out of contro
 
 You can see that the hash table approach is still scaling. It's just more more of a linear increase instead of the exponential scaling of the nested loop.
 
-If you want to play around with the above code, you can check out an example notebook here: [Ex_hashtables.ipynb](https://github.com/tyleracorn/lessons/blob/master/Ex_Hashtables.ipynb) 
+If you want to play around with the above code, you can check out an example notebook here: [Ex_hashtables.ipynb](https://github.com/tyleracorn/lessons/blob/master/Ex_Hashtables.ipynb)
 
 Or, open up my lessons repo on my binder and navigate to the `Ex_hashtables.ipynb` file in myBinder's interactive environment
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tyleracorn/lessons/master)
