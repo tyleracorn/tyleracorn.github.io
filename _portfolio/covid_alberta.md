@@ -2,7 +2,7 @@
 title: "Covid Alberta"
 excerpt: "web scraper and data visualization scripts for looking at covid-19 data from the alberta website"
 header:
-  teaser: https://github.com/tyleracorn/covid_alberta/raw/master/images/AlbertaDTimeIncrease_byCaseCount.png
+  teaser: assets/images/doubling_time_plotly.png
 toc: True
 ---
 
@@ -35,4 +35,8 @@ total_dt = calculate_doublingtimes_region(abTotal, col_suffix='cum_cases', combi
 
 I have seen a lot of graphs showing the cumulative curve with as well as the "2, 3, and 4 day doubling rate" curves. Which made me think, why not just calculate that rate? If you calculate the actual doubling rate you can start looking at some interesting things such as how our doubling rate is changing compared to the cumulative case count? Here's an example of that image.
 
-![doubling rate by case count](https://github.com/tyleracorn/covid_alberta/raw/master/images/AlbertaDTimeIncrease_byCaseCount.png "Doubling Rate by Case Count")
+<iframe id="igraph" scrolling="no" style="border:none;"
+seamless="seamless"
+src="/assets/images/doubling_time_plotly.html"
+alt="Doubling Time by Case Count"
+height="525" width="100%"></iframe>
