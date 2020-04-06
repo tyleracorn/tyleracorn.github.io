@@ -2,7 +2,7 @@
 title: "Covid Alberta"
 excerpt: "web scraper and data visualization scripts for looking at covid-19 data from the alberta website"
 header:
-  teaser: assets/images/doubling_time_plotly.png
+  teaser: assets/images/Alberta_doublingTime_RW.png
 toc: True
 ---
 
@@ -37,6 +37,6 @@ I have seen a lot of graphs showing the cumulative curve with as well as the "2,
 
 <iframe id="igraph" scrolling="no" style="border:none;"
 seamless="seamless"
-src="/assets/images/doubling_time_plotly.html"
+src="/assets/images/Alberta_doublingTime_RW.html"
 alt="Doubling Time by Case Count"
 height="525" width="100%"></iframe>

@@ -4,7 +4,7 @@ title: "Geostatistician (Spatial Analysis) - Data Scientist"
 author_profile: true
 gallery:
   - url: portfolio/covid_alberta/
-    image_path: https://github.com/tyleracorn/covid_alberta/raw/master/images/AlbertaDTimeIncrease_byCaseCount.png
+    image_path: assets/images/Alberta_doublingTime_RW.png
     alt: "covid alberta"
   - url: portfolio/prospect_predictor/
     image_path: assets/images/predictionHeatMap_projectBoundary.png
