@@ -15,6 +15,9 @@ gallery:
   - url: portfolio/pygeostat/
     image_path: http://www.ccgalberta.com/pygeostat/_images/pygeostat_logo.png
     alt: "pygeostat"
+  - url: portfolio/lessons/
+    image_path: assets/images/2020/lessons_nbs.png
+    alt: "lessons"
 toc: True
 ---
 
