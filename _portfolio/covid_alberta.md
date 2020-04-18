@@ -16,8 +16,9 @@ The `albertaC19_websraper` is a class that scrapes the updated stats off of the 
 
 example of using the webscraper
 ```python
-abC19scaper = albertaC19_webscraper()
-abTotal, abRegion, abTesting = abC19scaper.scrape_all(return_dataframes=True)
+import covid_alberta
+abC19 = covid_alberta.albertaC19()
+abTotal, abRegion, abTesting = abC19.scrape_all(return_dataframes=True)
 ```
 
 ## Data Analysis
@@ -28,15 +29,22 @@ I will convert it over into a more formal package with functions as I finish it 
 example for calculating the stats
 
 ```python
-region_cum = calculate_cumulatives(abRegion, combine_df=False)
-region_dt = calculate_doublingtimes_region(region_cum, combine_df=False)
-total_dt = calculate_doublingtimes_region(abTotal, col_suffix='cum_cases', combine_df=False)
+region_dt = calculate_doublingtimes(abRegion, col_suffix='cumulative', combine_df=False)
+total_dt = calculate_doublingtimes(abTotal, col_suffix='cum_cases', combine_df=False)
+
+all_data = abTotal.join([total_dt, abRegion, region_dt, abTesting])
 ```
 
 I have seen a lot of graphs showing the cumulative curve with as well as the "2, 3, and 4 day doubling rate" curves. Which made me think, why not just calculate that rate? If you calculate the actual doubling rate you can start looking at some interesting things such as how our doubling rate is changing compared to the cumulative case count? Here's an example of that image.
 
-<iframe id="igraph" scrolling="no" style="border:none;"
+<!-- <iframe id="igraph" scrolling="no" style="border:none;"
 seamless="seamless"
 src="/assets/images/Alberta_doublingTime_RW.html"
 alt="Doubling Time by Case Count"
-height="525" width="100%"></iframe>
+height="525" width="100%"></iframe> -->
+
+{% include posts_images/2020/doubling_time.html %}
+
+I have also been seeing a lot of plots lately showing the cumulative case counts which only tells part of the story. I decided to create another plot where I could look at case counts alongside the daily number of tests. This gives me an idea if how much to possibly trust the daily increase number.
+
+{% include posts_images/2020/daily_cases.html %}
