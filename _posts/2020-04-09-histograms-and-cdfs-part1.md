@@ -14,7 +14,7 @@ toc: true
 toc_sticky: true
 ---
 
-This is the first part of a two part series on histograms and CDF's. I find a lot of people new to data science, geostatistics, etc. are usually familiar and comfortable with histograms, however there is a lot to learn from CDF's which is why I tend to rely on them more. This series will cover the following topics
+This is the first part of a two part series on histograms and CDF's (Cumulative Distribution Function). I find a lot of people new to data science, geostatistics, etc. are usually familiar and comfortable with histograms, however there is a lot to learn from CDF's which is why I tend to rely on them more. This series will cover the following topics
 
 1. What are they?
     - Explain what a Histogram and CDF is
@@ -35,25 +35,27 @@ The main plots for this post are all based on the same randomly generated distri
 
 Histograms are one commonly used graphical representation of a distribution of numbers. They are typically plotted in a bar graph style plot where the height of each bar shows the frequency of a bin and represents the probability that a number will fall within that bin. This is in essence a slice of the area under a curve. The width of the bar represents the bin size used to group the numbers (or the width of the slice). The total width of all bars shows the range of values in the distribution. Here's an example showing the histogram and the estimated PDF for my normal distribution:
 
-<img src="/assets/images/2020/normal_histogram_pdf.png" style="max-width:300px" alt='histogram_pdf'>
+<img src="/assets/images/2020/normal_histogram_pdf.png" style="max-width:300px" width="100%" alt='histogram_pdf'>
 
-Add note about frequency versus density plots.
+As a quick side note: Many histogram plotting functions/programs out there by default plot a histogram with 'Frequency' on the y-axis. I don't find this vary useful because the frequency doesn't really mean anything without also knowing the how many samples are in your distribution. If you have a count of 30 samples in a bin and your sample size is 50 then that means something totally different than if you have a sample size of 10,000. Using the 'Density' option in numpy/matplotlib/plotly or whatever program you are using will convert it over to a probability value which I find way more useful. Here's a quick example showing the density plot versus the frequency plot.
+
+<img src="/assets/images/2020/normal_histogram_density_compare.png" style="max-width:600px" width="100%" alt='histogram_density_vs_frequency'>
 
 ## What's a CDF
 
 The cumulative distribution function (aka. CDF) is another graphical representation of the distribution of numbers (discrete, or continuous). The y-axis represents the cumulative probability, aka the percentile of your distribution. The x-axis is the values in your distribution (ordered from least to greatest). The line is using vertical distances to show the probabilities. Here's an example of the same normal distribution.
 
-<img src="/assets/images/2020/normal_cdf.png" style="max-width:300px" alt='cdf'>
+<img src="/assets/images/2020/normal_cdf.png" style="max-width:300px" width="100%" alt='cdf'>
 
 The CDF also works quite well for categorical distributions. Just be mindful of how the categories are related (ordinal or nominal). Here's an example of the same normal distribution converted into a categorical distribution by converting all values to integers:
 
-<img src="/assets/images/2020/normal_int_cdf.png" style="max-width:300px" alt='categorical cdf'>
+<img src="/assets/images/2020/normal_int_cdf.png" style="max-width:300px" width="100%" alt='categorical cdf'>
 
 ## How do we read a Histograms
 
 Ok so you probably already knew what a histogram was, and you might already know how to read a histogram, but to make sure we are on the same page lets look at what the histogram shows us. We'll take the same normal distribution and plot it's histogram, but this time in an interactive plot so you can look at some of the values yourself.
 
-{% include posts_images/2020/2020-04-09-normal_histogram_pdf.html %}
+{% include posts_images/2020/2020-04-normal_histogram_pdf.html %}
 
 First there are a some general pieces of information we can see from the plot without plotting any annotation. These are the range of values, probability of a value within a bin, the general shape of the distribution, the skewness of the distribution, and possible outliers. So lets look at those with the above plot:
 
@@ -67,9 +69,9 @@ In the above table, we did say there wasn't any skewness. How do we know that? W
 
 ## How do we read a CDF's
 
-Now that we know what a CDF is, lets start looking at what sort of information one can glean from this graph. First lets plot up our CDF again, but with some annotations.
+Now that we know what a CDF is, lets start looking at what sort of information one can glean from this graph. This time we'll plot up the CDF in an interactive plot. So go ahead and play around with it some!
 
-<img src="/assets/images/2020/normal_cdf_annotated.png" style="max-width:300px" alt='cdf'>
+{% include posts_images/2020/2020-04-normal_cdf.html %}
 
 What are the general pieces of information we can see? The range of values, Percentiles (i.e. P20 is where 20% of the values are less than or equal to that value), Your median (because the median is the P50), anything related to the percentiles (i.e. what values are between the P20 and the P80, or what values lie within +/- 20% of the median). So looking at the above cdf to find the percentile we find the decimal percentile value on the Y axis (P20 = 0.2) drew a line horizontally over to our cdf line and then go straight down, that's the percentile of our distribution. So let's look at some of those values for the above plot:
 
