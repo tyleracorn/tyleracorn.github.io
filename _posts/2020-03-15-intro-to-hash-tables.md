@@ -85,6 +85,8 @@ def compare_int_hash(intList, testInt):
     return False
 ```
 
+## Performance Comparison
+
 The above example is probably more like a *O(2N)* scale problem. So, now lets take a quick look at the performance of these two functions.
 
 ![Loopy-De-Loop vs Hashing]({{ site.url }}{{ site.baseurl }}/assets/images/loop_vs_hash.png)
@@ -101,3 +103,19 @@ Or, open up my lessons repo on my binder and navigate to the `Ex_hashtables.ipyn
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tyleracorn/lessons/master)
 
 Hope you enjoyed this quick example!
+
+## Further Resources
+
+If you want some further resources or even just have things explained another way, here are a few resources I found useful.
+
+* Algorithms online textbook.  [Chapter 3.4 Hash Tables](https://algs4.cs.princeton.edu/34hash/)
+  * The Algorithms online textbook provides a good overview of hash tables in general, from a computer science perspective.
+
+* FreeCodeCamp [Codeless Guide to Hashing and Hash Tables](https://www.freecodecamp.org/news/the-codeless-guide-to-hash/)
+  * This freeCodeCamp example is quick over view of what hashing is.
+
+* Lecture Notes from Carnegie Mellon Univsity [Algorithmic Complexity](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Algorithmic%20Complexity/complexity.html)
+  * A nice simple overview of the Big O and complexity of algorithms
+
+* Algorithms online textbook. [Performance Characteristics Cheatsheet](https://algs4.cs.princeton.edu/cheatsheet/)
+  * A nice little cheetsheet showing some of the Big0 algorithmic complexities for different types of algorithms.
